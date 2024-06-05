@@ -361,7 +361,6 @@ fun UnitOutlinedTextField(
     value: String,
     onValueChange: (String) -> Unit
 ) {
-    var text by remember { mutableStateOf("") }
     var expanded by remember { mutableStateOf(false) }
 
     Box(modifier = Modifier.fillMaxWidth(0.6f)) {
@@ -592,8 +591,6 @@ fun calculate(
     pieces: String,
     selectedMetrics: String
 ): Pair<Double, Double> {
-    var weight = 0.0
-    var volume = 0.0
     val density = selectedMetal.metalDensityGramsPerCmCubed
 
     if (selectedCapsuleButton == "Length") {
@@ -731,7 +728,6 @@ fun calculate(
         )
     }
 
-    return Pair(weight, volume)
 }
 
 
